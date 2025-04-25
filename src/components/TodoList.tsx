@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -78,7 +77,7 @@ const TodoList = () => {
         </Button>
       </form>
 
-      <div className="space-y-2">
+      <div className="space-y-2 text-left">
         {todos.map((todo) => (
           <div
             key={todo.id}
