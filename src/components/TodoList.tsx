@@ -69,7 +69,11 @@ const TodoList = () => {
           placeholder="Add a new task..."
           className="flex-1"
         />
-        <Button type="submit" size="icon">
+        <Button 
+          type="submit" 
+          size="icon" 
+          className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90"
+        >
           <Plus className="h-4 w-4" />
         </Button>
       </form>
@@ -88,7 +92,7 @@ const TodoList = () => {
               variant="ghost"
               size="icon"
               onClick={() => toggleTodo(todo.id)}
-              className="shrink-0"
+              className={`shrink-0 ${todo.completed ? 'text-[#0EA5E9]' : ''}`}
             >
               <Check className={`h-4 w-4 ${todo.completed ? "opacity-100" : "opacity-0"}`} />
             </Button>
