@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -81,10 +82,10 @@ const TodoList = () => {
         {todos.map((todo) => (
           <div
             key={todo.id}
-            className={`flex items-center gap-2 p-3 rounded-lg transition-all duration-200 ${
+            className={`flex items-center gap-2 p-3 rounded-lg transition-all duration-200 bg-[#f3f3f3] ${
               todo.completed 
-                ? "bg-secondary/50 line-through text-muted-foreground" 
-                : "bg-card hover:bg-accent"
+                ? "line-through text-muted-foreground" 
+                : "hover:bg-accent"
             }`}
           >
             <Button
@@ -112,3 +113,4 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
